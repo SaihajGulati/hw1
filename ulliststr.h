@@ -113,13 +113,48 @@ class ULListStr {
    */
   void clear();
 
+  /**
+   * function I added for testing purposes
+   */
+  size_t nodes() const;
+
  private:
   /** 
    * Returns a pointer to the item at index, loc,
    *  if loc is valid and NULL otherwise
    *   - MUST RUN in O(n) 
    */
-  std::string* getValAtLoc(size_t loc) const;
+  std::string* getValAtLoc(size_t loc) const
+  {
+    //if the location is invalid
+    if (loc >= size())
+    {
+      return nullptr;
+    }
+
+    //go through each item in linked list and check until get to location
+    Item* curr = head_;
+
+    //counter for what index we're at
+    size_t count = 0;
+
+    //iterate while count is less than or equal to size-1, because that way only checks if is valid
+    while (count < size())
+    {
+      //if the location int is less than the last index in this node, step in and get value
+      if (loc < (count + curr->last - curr->first))
+      {
+        return &(curr->val[curr->first+(loc-count)]);
+      }
+      else //move on to next node and next indexes
+      {
+        count += (curr->last - curr->first);
+        curr = curr->next;        
+      }
+    }
+    return nullptr;
+    
+  }
 
 
   /**
@@ -130,6 +165,9 @@ class ULListStr {
   Item* head_;
   Item* tail_;
   size_t size_;
+  //added for testing purposes
+  size_t nodes_;
+
 };
 
 #endif
