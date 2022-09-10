@@ -2,3 +2,8 @@
 split
 split.o
 split.dSYM/
+.DS_Store
+test
+test.dSYM/
+ulliststr_test
+ulliststr_test.dSYM/
