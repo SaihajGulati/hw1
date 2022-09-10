@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
 
 }
 
+//function to print a given list
 void printList(ULListStr* list)
 {
   for (size_t i = 0; i < list->size(); i++)
@@ -34,6 +35,7 @@ void printList(ULListStr* list)
 
 }
 
+//tesing push_front
 void pushBackTest()
 {
   ULListStr* list = new ULListStr();
@@ -101,6 +103,7 @@ void pushBackTest()
 
 }
 
+//testing push_front
 void pushFrontTest()
 {
   ULListStr* list = new ULListStr();
@@ -167,6 +170,7 @@ void pushFrontTest()
   delete list;
 }
 
+//testing pop_front
 void popFrontTest()
 {
   ULListStr* list = new ULListStr();
@@ -205,6 +209,7 @@ void popFrontTest()
   delete list;
 }
 
+//testing pop_back
 void popBackTest()
 {
   ULListStr* list = new ULListStr();
@@ -246,6 +251,7 @@ void popBackTest()
 
 }
 
+//testing every operation together
 void everything()
 {
   cout << endl;
