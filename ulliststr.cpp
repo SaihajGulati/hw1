@@ -235,7 +235,7 @@ void ULListStr::clear()
   }
 
   /**
-   * function I added for testing purposes
+   * function I added for testing purposes, writeup said could add member functions/variables
    */
   size_t ULListStr::nodes() const
   {

@@ -114,7 +114,7 @@ class ULListStr {
   void clear();
 
   /**
-   * function I added for testing purposes
+   * function I added for testing purposes, writeup said I could do so
    */
   size_t nodes() const;
 
@@ -165,7 +165,7 @@ class ULListStr {
   Item* head_;
   Item* tail_;
   size_t size_;
-  //added for testing purposes
+  //added for testing purposes, writeup said could do so
   size_t nodes_;
 
 };
